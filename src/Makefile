@@ -19,8 +19,8 @@ ifeq ($(MAKECMDGOALS),windows)
 CC=i686-w64-mingw32-gcc-win32
 OUTPUT=$(BINDIR)/doom_ascii.exe
 else
-CC=gcc
-CFLAGS+=-DNORMALUNIX -DLINUX
+CC=mips-linux-gnu-gcc
+CFLAGS+=-DNORMALUNIX -DLINUX -march=24kc
 OUTPUT=$(BINDIR)/doom_ascii
 endif
 
